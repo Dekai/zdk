@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Plugins.DataView.ExperimentalData.DataGridStyleSetting"
+              xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" 
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="colLeft" Width="180"></ColumnDefinition>
+            <ColumnDefinition Width="5"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <dxlc:GroupBox    Header="试验数据分类：" Margin="5,5,0,5" Padding="0,0,0,0" >
+            <WindowsFormsHost x:Name="host1"/>
+        </dxlc:GroupBox>
+
+        <Image x:Name="btnSplit" MouseLeftButtonDown="btnSplit_MouseLeftButtonDown" Grid.Column="1"  Source="../Images/split.png"  Cursor="Hand"/>
+
+        <dxlc:GroupBox  Grid.Column="2"   Header="样式设置：" Margin="0,5,0,5" Padding="0,0,0,0" >
+            <Grid Margin="20,20,20,20"  Width="400">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+                <TextBlock Text="大屏显示宽度：" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+                <TextBox x:Name="F_ShowWidth" Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="1">  </TextBox>
+                <TextBlock x:Name="F_ShowWidthTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Column="2"></TextBlock>
+
+                <TextBlock  Text="大屏显示高度：" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1"></TextBlock>
+                <TextBox  x:Name="F_ShowHeight"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="F_ShowHeightTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="1" Grid.Column="2"></TextBlock>
+
+
+                <TextBlock  Text="大屏字体大小：" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2"></TextBlock>
+                <TextBox  x:Name="F_ShowFontSize"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="F_ShowFontSizeTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="2" Grid.Column="2"></TextBlock>
+
+
+                <TextBlock  Text="大屏边框颜色：" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3"></TextBlock>
+                <TextBox  x:Name="F_ShowBorderColor"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="3" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="F_ShowBorderColorTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="3" Grid.Column="2"></TextBlock>
+
+                <TextBlock  Text="大屏字体颜色：" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4"></TextBlock>
+                <TextBox  x:Name="F_ShowFontColor"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="4" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="F_ShowFontColorTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="4" Grid.Column="2"></TextBlock>
+
+                <TextBlock  Text="大屏背景颜色：" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="5"></TextBlock>
+                <TextBox  x:Name="F_ShowBackColor"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="5" Grid.Column="1"></TextBox>
+                <TextBlock x:Name="F_ShowBackColorTip"  Text="" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Grid.Row="5" Grid.Column="2"></TextBlock>
+                
+                
+                <Button Content="保存" Grid.Row="6" Grid.Column="1" Height="28" Width="60" Click="Button_Click"></Button>
+                
+            </Grid>
+        </dxlc:GroupBox>
+
+        </Grid>
+
+
+
+</UserControl>

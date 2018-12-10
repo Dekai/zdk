@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/flow_sort_user_nameup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="9dp"
+        android:layout_marginTop="9dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_project_name"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:lines="1"
+            android:text="项目名称"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cost_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@+id/tv_project_name"
+            android:text="费用种类"
+            android:textColor="#606060"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cost_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/cost_type"
+            android:text="13812345678"
+            android:textColor="#0af109"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/cost_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_project_name"
+            android:layout_marginLeft="4dp"
+            android:text="13812345678"
+            android:textColor="#606060"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/cb_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="13dp"
+        android:button="@drawable/staffattendance_checkbox_selector"
+        android:clickable="false"
+        android:focusable="false" />
+
+</RelativeLayout>

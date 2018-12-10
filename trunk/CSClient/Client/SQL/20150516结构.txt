@@ -1,0 +1,376 @@
+﻿USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_DataDicType]    脚本日期: 05/16/2015 14:59:25 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_DataDicType](
+	[F_TypeCode] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_TypeName] [varchar](50) COLLATE Chinese_PRC_CI_AS NULL,
+ CONSTRAINT [PK_T_DataDicType] PRIMARY KEY CLUSTERED 
+(
+	[F_TypeCode] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_DataDicInfo]    脚本日期: 05/16/2015 14:59:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_DataDicInfo](
+	[F_ID] [int] NOT NULL,
+	[F_Name] [varchar](100) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_TypeCode] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Order] [int] NULL,
+ CONSTRAINT [PK_T_DataDicInfo] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Employee]    脚本日期: 05/16/2015 15:00:18 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Employee](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Mobile] [varchar](50) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_IsDelete] [int] NOT NULL CONSTRAINT [DF_T_Employee_F_IsDelete]  DEFAULT ((0)),
+ CONSTRAINT [PK_T_Employee] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Equipment]    脚本日期: 05/16/2015 15:00:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Equipment](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](50) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Decs] [varchar](150) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Order] [int] NULL,
+	[F_IsDelete] [int] NOT NULL CONSTRAINT [DF_T_Equipment_F_IsDelete]  DEFAULT ((0)),
+ CONSTRAINT [PK_T_Equipment] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_LoginUser]    脚本日期: 05/16/2015 15:00:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_LoginUser](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_LoginName] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_PassWord] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_UserID] [int] NOT NULL,
+	[F_RoleID] [int] NOT NULL,
+	[F_IsActive] [int] NOT NULL CONSTRAINT [DF_T_LoginUser_F_IsActive]  DEFAULT ((1)),
+ CONSTRAINT [PK_T_LoginUser] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Role]    脚本日期: 05/16/2015 15:01:04 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Role](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Order] [int] NULL,
+ CONSTRAINT [PK_T_Role] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Right]    脚本日期: 05/16/2015 15:01:22 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Right](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_PID] [int] NULL,
+	[F_Name] [varchar](150) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Code] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Order] [int] NULL,
+ CONSTRAINT [PK_T_Right] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Role_Right_Relation]    脚本日期: 05/16/2015 15:01:42 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[T_Role_Right_Relation](
+	[F_RoleID] [int] NOT NULL,
+	[F_RightID] [int] NOT NULL,
+ CONSTRAINT [PK_T_Role_Right_Relation] PRIMARY KEY CLUSTERED 
+(
+	[F_RoleID] ASC,
+	[F_RightID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Base_Fare]    脚本日期: 05/18/2015 10:21:33 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Base_Fare](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](150) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Content] [varchar](500) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Money] [float] NOT NULL,
+	[F_Time] [datetime] NOT NULL,
+	[F_WF_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_UserID] [int] NOT NULL,
+ CONSTRAINT [PK_T_Base_Fare] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Base_Payment]    脚本日期: 05/18/2015 10:21:53 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Base_Payment](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](150) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Content] [varchar](500) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Money] [float] NOT NULL,
+	[F_Time] [datetime] NOT NULL,
+	[F_WF_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_UserID] [int] NOT NULL,
+ CONSTRAINT [PK_T_Base_Payment] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_Base_Product]    脚本日期: 05/18/2015 10:22:13 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_Base_Product](
+	[F_ID] [int] IDENTITY(1,1) NOT NULL,
+	[F_Name] [varchar](150) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_Content] [varchar](500) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Money] [float] NOT NULL,
+	[F_Time] [datetime] NOT NULL,
+	[F_WF_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_UserID] [int] NOT NULL,
+ CONSTRAINT [PK_T_Base_Product] PRIMARY KEY CLUSTERED 
+(
+	[F_ID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+
+USE [PITCH]
+GO
+/****** 对象:  Table [dbo].[T_WorkFlow_Templete]    脚本日期: 05/18/2015 10:22:35 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_PADDING ON
+GO
+CREATE TABLE [dbo].[T_WorkFlow_Templete](
+	[F_LinkTask] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_StateName] [varchar](50) COLLATE Chinese_PRC_CI_AS NOT NULL,
+	[F_StateType] [int] NULL,
+	[F_Next_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NULL,
+	[F_Back_StateID] [varchar](50) COLLATE Chinese_PRC_CI_AS NULL,
+ CONSTRAINT [PK_T_WorkFlow_Templete] PRIMARY KEY CLUSTERED 
+(
+	[F_LinkTask] ASC,
+	[F_StateID] ASC
+)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+SET ANSI_PADDING OFF
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

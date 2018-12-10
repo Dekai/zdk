@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Plugins.DataView.ExperimentalData.Banner_1_Edit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="900">
+    <Grid>
+
+        <StackPanel x:Name="Panels" Orientation="Horizontal" >
+            <!--<TextBox  Name="txt0_value" AcceptsReturn="True"   Text="2015年5月1日"     MinWidth="100"  HorizontalAlignment="Stretch"  Margin="0,10,0,10"   VerticalContentAlignment="Center"  VerticalAlignment="Stretch" ></TextBox>
+
+            <TextBlock Name="txt1_title" Text="混合料型号："  HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox  Name="txt1_value"  AcceptsReturn="True"   Text="AC-10"   MinWidth="60"  HorizontalAlignment="Stretch"  Margin="0,10,0,10"   VerticalContentAlignment="Center"  VerticalAlignment="Stretch" ></TextBox>
+     
+
+   
+            <TextBlock  Name="txt2_title" Text="工程名称：" HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox  Name="txt2_value"  AcceptsReturn="True"   Text=""   MinWidth="120"  HorizontalAlignment="Stretch"   Margin="0,10,0,10"  VerticalContentAlignment="Center"  VerticalAlignment="Stretch" ></TextBox>
+   
+            <TextBlock   Name="txt3_title"  Text="再生料油石比："  HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox  Name="txt3_value"   AcceptsReturn="True"    Text=""    MinWidth="60" HorizontalAlignment="Stretch"  Margin="0,10,0,10"   VerticalContentAlignment="Center"  VerticalAlignment="Stretch" ></TextBox>
+       
+    
+            <TextBlock   Name="txt4_title"  Text="再生料添加量："  HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox   Name="txt4_value"  AcceptsReturn="True"    Text=""    MinWidth="60"  HorizontalAlignment="Stretch"  Margin="0,10,0,10"   VerticalContentAlignment="Center"  VerticalAlignment="Stretch" ></TextBox>
+       
+
+ 
+            <TextBlock   Name="txt5_title"  Text="试验："  HorizontalAlignment="Right" VerticalAlignment="Center"></TextBlock>
+            <TextBox   Name="txt5_value"  AcceptsReturn="True"   Text=""    MinWidth="60" HorizontalAlignment="Stretch"  Margin="0,10,0,10"  VerticalContentAlignment="Center"  VerticalAlignment="Stretch"></TextBox>
+
+            <TextBlock  Name="txt6_title"  Text="操作："  HorizontalAlignment="Stretch" VerticalAlignment="Center" ></TextBlock>
+            <TextBox  Name="txt6_value"  AcceptsReturn="True"   Text=""  HorizontalAlignment="Stretch"   VerticalContentAlignment="Center"  Margin="0,10,0,10"   MinWidth="60" VerticalAlignment="Stretch"></TextBox>-->
+        </StackPanel>
+
+    </Grid>
+</UserControl>

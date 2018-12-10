@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{403F44EE-CBCF-4B7F-A8BF-BD37C9FB8694}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.Model</RootNamespace>
+    <AssemblyName>Library.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Run\Lib\Library\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Run\Lib\Library\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entriy\Accident.cs" />
+    <Compile Include="Entriy\Audit.cs" />
+    <Compile Include="Entriy\Base_Fare.cs" />
+    <Compile Include="Entriy\Base_Payment.cs" />
+    <Compile Include="Entriy\Base_Product.cs" />
+    <Compile Include="Entriy\CostApply.cs" />
+    <Compile Include="Entriy\DataDicInfo.cs" />
+    <Compile Include="Entriy\DataDicType.cs" />
+    <Compile Include="Entriy\Employee.cs" />
+    <Compile Include="Entriy\EmployeeAttendace.cs" />
+    <Compile Include="Entriy\EquimentAttendace.cs" />
+    <Compile Include="Entriy\Equipment.cs" />
+    <Compile Include="Entriy\ExpatriateAttendace.cs" />
+    <Compile Include="Entriy\LoginUser.cs" />
+    <Compile Include="Entriy\Project.cs" />
+    <Compile Include="Entriy\ProjectCost.cs" />
+    <Compile Include="Entriy\Right.cs" />
+    <Compile Include="Entriy\Role.cs" />
+    <Compile Include="Entriy\Role_Right_Relation.cs" />
+    <Compile Include="Entriy\Role_Workflow.cs" />
+    <Compile Include="Entriy\Test_Field.cs" />
+    <Compile Include="Entriy\Test_Field_Templete.cs" />
+    <Compile Include="Entriy\Test_Table.cs" />
+    <Compile Include="Entriy\Test_Table_Templete.cs" />
+    <Compile Include="Entriy\WorkFlow_Templete.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Struct\NameValue.cs" />
+    <Compile Include="Struct\PagerTable.cs" />
+    <Compile Include="Entriy\UploadImages.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Library.Util\Library.Common.csproj">
+      <Project>{20F01677-8E83-448B-BB7E-1F0B0F3C0630}</Project>
+      <Name>Library.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

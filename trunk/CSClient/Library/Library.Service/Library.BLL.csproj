@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6B86CF0-5F5C-409E-8D9F-F9D0FBB73B5B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Library.BLL</RootNamespace>
+    <AssemblyName>Library.BLL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\Run\Lib\Library\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\Run\Lib\Library\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccidentService.cs" />
+    <Compile Include="AuditService..cs" />
+    <Compile Include="Base_FareService.cs" />
+    <Compile Include="Base_PaymentService.cs" />
+    <Compile Include="Base_ProductService.cs" />
+    <Compile Include="CostApplyService.cs" />
+    <Compile Include="DataDicInfoService.cs" />
+    <Compile Include="DataDicTypeService.cs" />
+    <Compile Include="EmployeeAttendaceService.cs" />
+    <Compile Include="EmployeeService.cs" />
+    <Compile Include="EquimentAttendaceService.cs" />
+    <Compile Include="EquipmentService.cs" />
+    <Compile Include="ExpatriateAttendaceService.cs" />
+    <Compile Include="LoginUserService.cs" />
+    <Compile Include="ProjectCostService.cs" />
+    <Compile Include="ProjectService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RightService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="Role_Right_RelationService.cs" />
+    <Compile Include="Role_Workflow.cs" />
+    <Compile Include="Test_FieldService.cs" />
+    <Compile Include="Test_Field_TempleteService.cs" />
+    <Compile Include="Test_TableService.cs" />
+    <Compile Include="Test_Table_TempleteService.cs" />
+    <Compile Include="UploadImagesService.cs" />
+    <Compile Include="WorkFlow_TempleteService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\BaseControl\BaseControl.csproj">
+      <Project>{B166E49D-EB70-4A88-BB8D-6EF06A7BDEB4}</Project>
+      <Name>BaseControl</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.DALFactory\Library.DALFactory.csproj">
+      <Project>{1F1832E9-1B5C-4B87-AD8D-04BAD559B719}</Project>
+      <Name>Library.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.IDAL\Library.IDAL.csproj">
+      <Project>{02EB7880-4785-4730-B0A7-8DFC17ACAB59}</Project>
+      <Name>Library.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.Model\Library.Model.csproj">
+      <Project>{403F44EE-CBCF-4B7F-A8BF-BD37C9FB8694}</Project>
+      <Name>Library.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library.Util\Library.Common.csproj">
+      <Project>{20F01677-8E83-448B-BB7E-1F0B0F3C0630}</Project>
+      <Name>Library.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

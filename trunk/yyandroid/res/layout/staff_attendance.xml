@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/flow_ball_ani_full_green" >
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="55dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/top_return"
+            android:paddingLeft="8dp"
+            android:text="返回"
+            android:textColor="#ffffff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="员工考勤登记"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/user_list"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/title"
+        android:background="#ECECEC"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_project_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:text="项目:"
+            android:textSize="14sp" />
+
+        <FrameLayout
+            android:id="@+id/project_spn_fl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Spinner
+                android:id="@+id/sp_project"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/form_row_input_middle_short_right"
+                android:gravity="left|center"
+                android:paddingLeft="0dp"
+                android:textSize="14sp" 
+                android:textStyle="bold"  
+                android:prompt="@string/project_prompt"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginLeft="110.0dip"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/go_detail" />
+        </FrameLayout>
+
+    </LinearLayout>
+    
+    
+        <LinearLayout
+        android:id="@+id/user_list1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/user_list"
+        android:background="#ECECEC"
+        android:orientation="horizontal" >
+        
+          <TextView
+            android:id="@+id/tv_project_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:text="日期:"
+            android:textSize="14sp" />
+                    
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/btn_date"
+                android:layout_width="fill_parent"
+              	 android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:paddingLeft="8dp"
+                android:textSize="16sp" 
+                android:background="@drawable/form_row_input_middle_short_right"
+                android:gravity="left|center"
+                />
+
+                <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center"
+                android:layout_marginLeft="110.0dip"
+                android:layout_marginRight="2dp"
+                android:background="@drawable/go_detail" />
+        </FrameLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/flow_memory_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/password_edit_confirm_icon_bg_normal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_promot"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:background="#ECECEC"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="出勤"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/attendance_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="0"
+                android:textColor="#00EE00"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人，"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="缺勤"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/absense_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:text="0"
+                android:textColor="@color/red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="人"
+                android:textColor="#000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_enrollStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:text="未记录"
+                android:textColor="#00EE00"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/staff_enroll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/flow_btn_selector"
+            android:text="记录考勤"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/flow_memory_ll"
+        android:layout_below="@id/user_list1"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/user_listview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+
+        <TextView
+            android:id="@+id/emptyText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="没有记录"
+            android:textSize="20sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/progress_loading"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1.2"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <com.yy.android.util.ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="正在加载。。。"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

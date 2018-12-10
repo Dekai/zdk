@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="project">
+        <item>Project A</item>
+        <item>Project B</item>
+        <item>Project C</item>
+        <item>Project D</item>
+        <item>Project E</item>
+        <item>Project F</item>
+    </string-array>
+    <string-array name="costtype">
+        <item>饭费</item>
+        <item>住宿费</item>
+        <item>水费</item>
+        <item>柴油费</item>
+        <item>拖车费</item>
+        <item>普通车辆费</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="workertype">
+        <item>工头</item>
+        <item>普通工人</item>
+        <item>耙工</item>
+    </string-array>
+
+</resources>

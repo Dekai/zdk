@@ -1,0 +1,8 @@
+﻿0	-1	系统首页	FirstPage	1
+2	-1	外勤工程	Project	2
+3	2	考勤信息汇总	Project.Attendance	1
+4	2	设备出场汇总	Project.Equipment	2
+5	2	工程费用汇总	Project.Cost	3
+6	-1	公告管理	Notice	3
+7	6	实验数据录入	Notice.DataInput	1
+8	6	历史数据	Notice.History	2
